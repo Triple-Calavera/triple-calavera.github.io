@@ -42,7 +42,7 @@ jobs:
       - name: Checkout devlog/blog files
         uses: actions/checkout@v4
         with:
-          repository: Triple-Calavera/devlog.git
+          repository: Triple-Calavera/devlog
           path: src/content/blog
       - name: Checkout markdown page files
         uses: actions/checkout@v4
