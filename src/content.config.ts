@@ -3,7 +3,7 @@ import { defineCollection, z } from 'astro:content';
 
 const blog = defineCollection({
 	// Load Markdown and MDX files in the `src/content/devlogs/` directory.
-	loader: glob({ base: './src/content/blog', pattern: '**/*.{md,mdx}' }),
+	loader: glob({ base: './src/content/triple-calavera-devlogs', pattern: '**/*.{md,mdx}' }),
 	// Type-check frontmatter using a schema
 	schema: z.object({
 		title: z.string(),
@@ -18,7 +18,7 @@ const blog = defineCollection({
 
 const gdd = defineCollection({
 	// Load Markdown and MDX files in the `src/content/devlogs/` directory.
-	loader: glob({ base: './src/content/pages/skeleton-hell-2/gdd', pattern: '**/*.{md,mdx}' }),
+	loader: glob({ base: './src/content/triple-calavera-webpages/skeleton-hell-2/gdd', pattern: '**/*.{md,mdx}' }),
 	// Type-check frontmatter using a schema
 	schema: z.object({
 		title: z.string(),
