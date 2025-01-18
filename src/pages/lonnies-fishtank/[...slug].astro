@@ -1,0 +1,23 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+import { render } from 'astro:content';
+import GDDPage from '../../layouts/GDDPage.astro';
+
+export async function getStaticPaths() {
+	const posts = await getCollection('gdd');
+	return posts.map((post) => ({
+		params: { slug: "gdd/" + post.id },
+		props: post,
+	}));
+}
+type Props = CollectionEntry<'gdd'>;
+
+const post = Astro.props;
+const { Content } = await render(post);
+---
+
+<GDDPage {...post.data}>
+	<Content />
+</GDDPage>
+
+

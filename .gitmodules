@@ -1,0 +1,6 @@
+[submodule "src/content/blog"]
+	path = src/content/blog
+	url = https://github.com/Triple-Calavera/devlogs.git
+[submodule "src/content/pages"]
+	path = src/content/pages
+	url = https://github.com/Triple-Calavera/website-pages.git

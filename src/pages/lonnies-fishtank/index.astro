@@ -1,0 +1,74 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+
+import * as gddBasePost from '../../content/pages/skeleton-hell-2/index.md';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			main {
+				width: 100%;
+			}
+			.title {
+				margin: 0;
+				color: rgb(var(--black));
+				line-height: 1;
+			}
+			.date {
+				margin: 0;
+				color: rgb(var(--gray));
+			}
+			body {
+			margin: 0;
+			}
+
+			.container {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: center;
+			}
+
+			.left {
+			padding: 20px;
+			text-align: left;
+			}
+
+			.right {
+			width: 1200px;
+			padding: 20px;
+			}
+
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<div class="container">
+				<div class="left">
+					<h5>
+					Contents
+					</h5>
+						<div> 1. <a href="/skeleton-hell-2/gdd/1-introduction">Introduction</a></div>
+						<div> 2. <a href="/skeleton-hell-2/gdd/2-loops">Core Loops</a></div>
+						<div> 3. <a href="/skeleton-hell-2/gdd/3-objectives">Objectives and Progression</a></div>
+						<div> 4. <a href="/skeleton-hell-2/gdd/4-systems">Game Systems</a></div>
+						<div> 5. <a href="/skeleton-hell-2/gdd/5-interactivity">Interactivity</a></div>
+				</div>
+				<div class="right">
+					<h3>
+						{gddBasePost.frontmatter.title}
+					</h3>
+					<gddBasePost.Content />
+				</div>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>

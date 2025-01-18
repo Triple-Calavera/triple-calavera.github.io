@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/BlogPost.astro';
+
+import * as aboutBasePost from '../content/pages/about.md';
+---
+
+<Layout
+	title="About Triple Calavera"
+	description="About Triple Calavera"
+	pubDate={new Date('2024-12-21')}
+	heroImage="/triple-calavera/placeholder-2.jpg"
+>
+	<aboutBasePost.Content />
+	
+
+</Layout>
